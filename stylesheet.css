@@ -140,3 +140,16 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+/* Introduction text and links styling */
+.intro-text {
+  font-size: 15px;
+}
+
+.contact-links {
+  font-size: 15px;
+}
+
+.research-interests {
+  font-size: 15px;
+}
