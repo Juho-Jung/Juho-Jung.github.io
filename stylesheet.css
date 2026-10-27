@@ -1,5 +1,5 @@
 :root {
-  --serif: 'Palatino Linotype', Palatino, 'Book Antiqua', 'TeX Gyre Pagella', 'URW Palladio L', P052, 'Crimson Pro', Georgia, serif;
+  --serif: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   --link: #0048a6;
   --accent: #f18800;
 }
@@ -28,11 +28,11 @@ a {
 
 body {
   background: #fff;
-  color: #1a1a1a;
 }
 
 strong {
   font-family: var(--serif);
+  font-size: 15px;
 }
 
 h2 {
@@ -52,7 +52,7 @@ h2 {
   padding-top: 20px;
   margin: 0;
   font-family: var(--serif);
-  font-size: 32px;
+  font-size: 34px;
 }
 
 .one {
@@ -89,15 +89,15 @@ span.highlight {
 
 /* Introduction text and links styling */
 .intro-text {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .contact-links {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .research-interests {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* News */
