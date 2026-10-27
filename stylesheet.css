@@ -1,6 +1,7 @@
 :root {
   --serif: 'Palatino Linotype', Palatino, 'Book Antiqua', 'TeX Gyre Pagella', 'URW Palladio L', P052, 'Crimson Pro', Georgia, serif;
-  --link: #1a55a6;
+  --link: #0048a6;
+  --accent: #f18800;
 }
 
 a {
@@ -10,7 +11,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -38,7 +39,7 @@ h2 {
   margin: 0;
   font-weight: 700;
   font-family: var(--serif);
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .papertitle {
@@ -102,27 +103,22 @@ span.highlight {
 /* News */
 .news {
   list-style: none;
-  margin: 18px 0 0;
-  padding: 0 0 0 28px;
+  margin: 14px 0 10px;
+  padding: 0;
 }
 
 .news li {
   position: relative;
-  padding-left: 30px;
-  margin-bottom: 12px;
-  font-size: 16px;
+  padding-left: 1.8em;
+  margin-bottom: 8px;
 }
 
-.news li::before {
-  content: '';
+.news li > i.fa-chevron-right {
   position: absolute;
-  left: 2px;
-  top: 0.45em;
-  width: 7px;
-  height: 7px;
-  border-top: 2.5px solid var(--link);
-  border-right: 2.5px solid var(--link);
-  transform: rotate(45deg);
+  left: 0;
+  top: 0.35em;
+  color: var(--link);
+  font-size: 13px;
 }
 
 .news .date {
@@ -131,50 +127,68 @@ span.highlight {
 
 .news .date.recent {
   font-weight: normal;
-  color: #e07b24;
+  color: var(--accent);
 }
 
 .new-badge {
   display: inline-block;
-  margin-right: 6px;
-  padding: 0 4px;
+  margin-right: 5px;
+  padding: 0 3px;
   background: #111;
   color: #fff;
   font-family: Menlo, Consolas, monospace;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  line-height: 15px;
+  line-height: 13px;
   border-radius: 2px;
   vertical-align: 2px;
+  animation: new-blink 1.2s steps(2, start) infinite;
 }
 
-.news[hidden] {
+@keyframes new-blink {
+  50% { background: #e8361f; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .new-badge { animation: none; }
+}
+
+.older-news summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  color: var(--link);
+  transition: color 0.2s ease;
+}
+
+.older-news summary:hover {
+  color: var(--accent);
+}
+
+.older-news summary::-webkit-details-marker {
   display: none;
 }
 
-.news + .news {
-  margin-top: 0;
+.older-news summary::after {
+  content: '\f107';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-left: 0.4em;
 }
 
-.news-toggle {
-  margin: 2px 0 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  cursor: pointer;
-  color: var(--link);
-  font-family: var(--serif);
-  font-size: 16px;
+.older-news[open] summary::after {
+  content: '\f106';
 }
 
-.news-toggle:hover {
-  color: #f09228;
+.older-news .hide,
+.older-news[open] .show {
+  display: none;
 }
 
-.news-toggle::after {
-  content: ' \25BE';
+.older-news[open] .hide {
+  display: inline;
 }
 
-.news-toggle[aria-expanded="true"]::after {
-  content: ' \25B4';
+.older-news .news {
+  margin-top: 12px;
 }

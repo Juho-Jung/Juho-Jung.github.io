@@ -28,7 +28,7 @@
       .pub .links{ margin:10px 0 0; display:flex; flex-wrap:wrap; gap:8px; }
       .pub .links .btn{ display:inline-flex; align-items:center; gap:6px; padding:3px 13px 3px 11px; border:1px solid #c8d5ea; border-radius:999px; background:#f4f7fc; color:var(--link); font-size:14px; line-height:1.45; transition:background .18s, color .18s, border-color .18s, box-shadow .18s, transform .18s; }
       .pub .links .btn i{ font-size:12.5px; opacity:.85; }
-      .pub .links .btn:hover, .pub .links .btn:focus-visible{ background:var(--link); border-color:var(--link); color:#fff; transform:translateY(-1px); box-shadow:0 3px 8px rgba(26,85,166,.22); }
+      .pub .links .btn:hover, .pub .links .btn:focus-visible{ background:var(--link); border-color:var(--link); color:#fff; transform:translateY(-1px); box-shadow:0 3px 8px rgba(0,72,166,.22); }
       .pub .links .btn:hover i, .pub .links .btn:focus-visible i{ opacity:1; }
       
       /* Juho Jung author name styling */
@@ -151,19 +151,21 @@
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>News</h2>
                 <ul class="news">
-                  <li><span class="new-badge">new</span><span class="date recent">[Oct 2026]</span> New preprint on arXiv! <a href="https://arxiv.org/abs/2610.17808">SPARCL</a> (<strong>Sp</strong>atially <strong>A</strong>daptive <strong>R</strong>egional <strong>C</strong>overage for Active <strong>L</strong>earning) is an entropy-gated acquisition strategy that balances predictive uncertainty with spatial coverage, adapting to both focal and diffuse lesion patterns in chest X-rays. See the <a href="https://github.com/vuno/sparcl">code</a>.</li>
-                  <li><span class="new-badge">new</span><span class="date recent">[Sep 2026]</span> One paper accepted to <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a> as a poster! <a href="https://juho-jung.github.io/multitask_active_learning_official/">ODS</a> deconstructs multi-task active learning: gradient conflict is moved out of the acquisition score and resolved by the optimizer, and selection becomes two ordered stages of informativeness filtering and coverage maximization. See the <a href="https://juho-jung.github.io/multitask_active_learning_official/">project page</a>.</li>
-                  <li><span class="new-badge">new</span><span class="date recent">[Sep 2026]</span> I was recognized as a <strong>Top Reviewer</strong> at <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a>.</li>
-                  <li><span class="date">[Jul 2026]</span> I served as a Program Committee member for <a href="https://aaai.org/conference/aaai/aaai-27/">AAAI 2027</a>.</li>
-                  <li><span class="date">[May 2026]</span> I was recognized as a <strong>Top Reviewer</strong> at <a href="https://icml.cc/Conferences/2026">ICML 2026</a>.</li>
-                  <li><span class="date">[Mar 2026]</span> I served as a reviewer for <a href="https://conferences.miccai.org/2026/">MICCAI 2026</a>.</li>
+                  <li><span class="new-badge">new</span><i class="fa-solid fa-chevron-right"></i><span class="date recent">[Oct 2026]</span> New preprint on arXiv! <a href="https://arxiv.org/abs/2610.17808">SPARCL</a> (<strong>Sp</strong>atially <strong>A</strong>daptive <strong>R</strong>egional <strong>C</strong>overage for Active <strong>L</strong>earning) is an entropy-gated acquisition strategy that balances predictive uncertainty with spatial coverage, adapting to both focal and diffuse lesion patterns in chest X-rays. See the <a href="https://github.com/vuno/sparcl">code</a>.</li>
+                  <li><span class="new-badge">new</span><i class="fa-solid fa-chevron-right"></i><span class="date recent">[Sep 2026]</span> One paper accepted to <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a> as a poster! <a href="https://juho-jung.github.io/multitask_active_learning_official/">ODS</a> deconstructs multi-task active learning: gradient conflict is moved out of the acquisition score and resolved by the optimizer, and selection becomes two ordered stages of informativeness filtering and coverage maximization. See the <a href="https://juho-jung.github.io/multitask_active_learning_official/">project page</a>.</li>
+                  <li><span class="new-badge">new</span><i class="fa-solid fa-chevron-right"></i><span class="date recent">[Sep 2026]</span> I was recognized as a <strong>Top Reviewer</strong> at <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a>.</li>
+                  <li><i class="fa-solid fa-chevron-right"></i><span class="date">[Jul 2026]</span> I served as a Program Committee member for <a href="https://aaai.org/conference/aaai/aaai-27/">AAAI 2027</a>.</li>
+                  <li><i class="fa-solid fa-chevron-right"></i><span class="date">[May 2026]</span> I was recognized as a <strong>Top Reviewer</strong> at <a href="https://icml.cc/Conferences/2026">ICML 2026</a>.</li>
+                  <li><i class="fa-solid fa-chevron-right"></i><span class="date">[Mar 2026]</span> I served as a reviewer for <a href="https://conferences.miccai.org/2026/">MICCAI 2026</a>.</li>
                 </ul>
-                <ul class="news" id="older-news" hidden>
-                    <li><span class="date">[Jan 2026]</span> I served as a reviewer for <a href="https://eccv.ecva.net/">ECCV 2026</a>.</li>
-                    <li><span class="date">[Nov 2025]</span> I served as a reviewer for <a href="https://cvpr.thecvf.com/Conferences/2026">CVPR 2026</a>.</li>
-                    <li><span class="date">[Oct 2025]</span> New preprint on arXiv! <a href="https://arxiv.org/abs/2510.00428">Contextualized SRRG</a> incorporates rich clinical context, such as prior studies and patient history, into structured radiology report generation, reducing temporal hallucinations. See the <a href="https://github.com/Juho-Jung/contextualized-srrg">code</a>.</li>
+                <details class="older-news">
+                  <summary><span class="show">Show older news</span><span class="hide">Hide older news</span></summary>
+                  <ul class="news">
+                    <li><i class="fa-solid fa-chevron-right"></i><span class="date">[Jan 2026]</span> I served as a reviewer for <a href="https://eccv.ecva.net/">ECCV 2026</a>.</li>
+                    <li><i class="fa-solid fa-chevron-right"></i><span class="date">[Nov 2025]</span> I served as a reviewer for <a href="https://cvpr.thecvf.com/Conferences/2026">CVPR 2026</a>.</li>
+                    <li><i class="fa-solid fa-chevron-right"></i><span class="date">[Oct 2025]</span> New preprint on arXiv! <a href="https://arxiv.org/abs/2510.00428">Contextualized SRRG</a> incorporates rich clinical context, such as prior studies and patient history, into structured radiology report generation, reducing temporal hallucinations. See the <a href="https://github.com/Juho-Jung/contextualized-srrg">code</a>.</li>
                   </ul>
-                <button type="button" class="news-toggle" aria-controls="older-news" aria-expanded="false" onclick="var l=document.getElementById('older-news'),o=l.hidden;l.hidden=!o;this.setAttribute('aria-expanded',o);this.firstChild.textContent=o?'Hide older news':'Show older news';">Show older news</button>
+                </details>
               </td>
             </tr>
           </tbody></table>
