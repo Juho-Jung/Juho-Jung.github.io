@@ -12,6 +12,10 @@
     <link rel="apple-touch-icon" href="images/favicon/정주호_증명사진_001.jpeg?v=2">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/정주호_증명사진_001.jpeg?v=2">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/정주호_증명사진_001.jpeg?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
     <style>
@@ -19,9 +23,13 @@
       .pub { display:flex; align-items:center; gap:20px; margin:18px 0; }
       .pub .thumb { flex:0 0 250px; max-width:250px; }
       .pub .thumb img{ width:100%; height:180px; object-fit:contain; display:block; }
-      .pub .meta{ flex:1 1 auto; font-size:14px; line-height:1.5; }
-      .pub .papertitle{ font-size:16px; font-weight:700; }
-      .pub .links{ margin:4px 0 0; }
+      .pub .meta{ flex:1 1 auto; font-size:15px; line-height:1.5; }
+      .pub .papertitle{ font-size:17px; font-weight:700; }
+      .pub .links{ margin:10px 0 0; display:flex; flex-wrap:wrap; gap:8px; }
+      .pub .links .btn{ display:inline-flex; align-items:center; gap:6px; padding:3px 13px 3px 11px; border:1px solid #c8d5ea; border-radius:999px; background:#f4f7fc; color:var(--link); font-size:14px; line-height:1.45; transition:background .18s, color .18s, border-color .18s, box-shadow .18s, transform .18s; }
+      .pub .links .btn i{ font-size:12.5px; opacity:.85; }
+      .pub .links .btn:hover, .pub .links .btn:focus-visible{ background:var(--link); border-color:var(--link); color:#fff; transform:translateY(-1px); box-shadow:0 3px 8px rgba(26,85,166,.22); }
+      .pub .links .btn:hover i, .pub .links .btn:focus-visible i{ opacity:1; }
       
       /* Juho Jung author name styling */
       .pub .meta strong u { font-size: 1.1em; }
@@ -141,6 +149,27 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>News</h2>
+                <ul class="news">
+                  <li><span class="new-badge">new</span><span class="date recent">[Oct 2026]</span> New preprint on arXiv! <a href="https://arxiv.org/abs/2610.17808">SPARCL</a> (<strong>Sp</strong>atially <strong>A</strong>daptive <strong>R</strong>egional <strong>C</strong>overage for Active <strong>L</strong>earning) is an entropy-gated acquisition strategy that balances predictive uncertainty with spatial coverage, adapting to both focal and diffuse lesion patterns in chest X-rays. See the <a href="https://github.com/vuno/sparcl">code</a>.</li>
+                  <li><span class="new-badge">new</span><span class="date recent">[Sep 2026]</span> One paper accepted to <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a> as a poster! <a href="https://juho-jung.github.io/multitask_active_learning_official/">ODS</a> deconstructs multi-task active learning: gradient conflict is moved out of the acquisition score and resolved by the optimizer, and selection becomes two ordered stages of informativeness filtering and coverage maximization. See the <a href="https://juho-jung.github.io/multitask_active_learning_official/">project page</a>.</li>
+                  <li><span class="new-badge">new</span><span class="date recent">[Sep 2026]</span> I was recognized as a <strong>Top Reviewer</strong> at <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a>.</li>
+                  <li><span class="date">[Jul 2026]</span> I served as a Program Committee member for <a href="https://aaai.org/conference/aaai/aaai-27/">AAAI 2027</a>.</li>
+                  <li><span class="date">[May 2026]</span> I was recognized as a <strong>Top Reviewer</strong> at <a href="https://icml.cc/Conferences/2026">ICML 2026</a>.</li>
+                  <li><span class="date">[Mar 2026]</span> I served as a reviewer for <a href="https://conferences.miccai.org/2026/">MICCAI 2026</a>.</li>
+                </ul>
+                <ul class="news" id="older-news" hidden>
+                    <li><span class="date">[Jan 2026]</span> I served as a reviewer for <a href="https://eccv.ecva.net/">ECCV 2026</a>.</li>
+                    <li><span class="date">[Nov 2025]</span> I served as a reviewer for <a href="https://cvpr.thecvf.com/Conferences/2026">CVPR 2026</a>.</li>
+                    <li><span class="date">[Oct 2025]</span> New preprint on arXiv! <a href="https://arxiv.org/abs/2510.00428">Contextualized SRRG</a> incorporates rich clinical context, such as prior studies and patient history, into structured radiology report generation, reducing temporal hallucinations. See the <a href="https://github.com/Juho-Jung/contextualized-srrg">code</a>.</li>
+                  </ul>
+                <button type="button" class="news-toggle" aria-controls="older-news" aria-expanded="false" onclick="var l=document.getElementById('older-news'),o=l.hidden;l.hidden=!o;this.setAttribute('aria-expanded',o);this.firstChild.textContent=o?'Hide older news':'Show older news';">Show older news</button>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Selected Publications</h2>
                 <p>
                   <em>(Equal contributions are denoted by *)</em>
@@ -149,6 +178,59 @@
             </tr>
           </tbody></table>
           
+          <div class="pub">
+            <div class="thumb">
+              <a href="data/paper/logo-ods-neurips-2026.png">
+                <img alt="paper logo" src="data/paper/logo-ods-neurips-2026.png">
+              </a>
+            </div>
+
+            <div class="meta">
+              <a href="https://juho-jung.github.io/multitask_active_learning_official/">
+                <span class="papertitle">
+                  Deconstructing Multi-Task Active Learning: The Paradox of Gradient Conflict and Orthogonal Decomposition
+                </span>
+              </a><br>
+              <strong><u>Juho Jung</u></strong>*, Seongjae Kang*, Jinyoung Han<br>
+              <em>NeurIPS</em> (Poster), 2026
+              <div class="links">
+                <a class="btn" href="https://juho-jung.github.io/multitask_active_learning_official/"><i class="fa-solid fa-arrow-up-right-from-square"></i>project page</a>
+                <a class="btn" href="https://arxiv.org/abs/2610.23623"><i class="fa-solid fa-scroll"></i>arXiv</a>
+                <a class="btn" href="https://arxiv.org/pdf/2610.23623"><i class="fa-solid fa-file-lines"></i>paper</a>
+                <a class="btn" href="https://github.com/Juho-Jung/multitask_active_learning_official"><i class="fa-brands fa-github"></i>code</a>
+              </div>
+              <p style="margin-top:8px">
+                Gradient conflict leaves the acquisition score and is resolved by the optimizer; selection becomes two ordered stages that filter by informativeness, then maximize coverage among the survivors.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub">
+            <div class="thumb">
+              <a href="data/paper/logo-sparcl-arxiv-2026.png">
+                <img alt="paper logo" src="data/paper/logo-sparcl-arxiv-2026.png">
+              </a>
+            </div>
+
+            <div class="meta">
+              <a href="https://arxiv.org/abs/2610.17808">
+                <span class="papertitle">
+                  SPARCL: Spatially Adaptive Regional Coverage for Active Learning in Chest X-ray Analysis
+                </span>
+              </a><br>
+              <strong><u>Juho Jung</u></strong>, Seongjae Kang, Mijoo Kim, Sungduk Cho, Yunkyoung Jun, Sunghoon Joo, Yoona Hwang<br>
+              <em>arXiv preprint</em>, 2026
+              <div class="links">
+                <a class="btn" href="https://arxiv.org/abs/2610.17808"><i class="fa-solid fa-scroll"></i>arXiv</a>
+                <a class="btn" href="https://arxiv.org/pdf/2610.17808"><i class="fa-solid fa-file-lines"></i>paper</a>
+                <a class="btn" href="https://github.com/vuno/sparcl"><i class="fa-brands fa-github"></i>code</a>
+              </div>
+              <p style="margin-top:8px">
+                An entropy-gated acquisition strategy that balances predictive uncertainty with within-batch spatial coverage, together with spatial-reliability metrics that expose regional gaps hidden by aggregate Dice.
+              </p>
+            </div>
+          </div>
+
           <div class="pub">
             <div class="thumb">
               <a href="data/paper/logo-srrg-arxiv-2025.png">
@@ -165,10 +247,10 @@
               Seongjae Kang*, Dong Bok Lee*, <strong><u>Juho Jung</u></strong>, Dongseop Kim, Won Hwa Kim, Sunghoon Joo<br>
               <em>Under Review, arXiv</em>, 2025
               <div class="links">
-                <a href="https://huggingface.co/papers/2510.00428">Project Page</a> |
-                <a href="https://arxiv.org/abs/2510.00428">arXiv</a> |
-                <a href="data/paper/srrg-arxiv-2025.pdf">Paper</a> |
-                <a href="https://github.com/Juho-Jung/contextualized-srrg">Code</a>
+                <a class="btn" href="https://huggingface.co/papers/2510.00428"><i class="fa-solid fa-arrow-up-right-from-square"></i>project page</a>
+                <a class="btn" href="https://arxiv.org/abs/2510.00428"><i class="fa-solid fa-scroll"></i>arXiv</a>
+                <a class="btn" href="data/paper/srrg-arxiv-2025.pdf"><i class="fa-solid fa-file-lines"></i>paper</a>
+                <a class="btn" href="https://github.com/Juho-Jung/contextualized-srrg"><i class="fa-brands fa-github"></i>code</a>
               </div>
               <p style="margin-top:8px">
                 Incorporating clinical context into automated structured radiology report generation improves report
@@ -193,9 +275,9 @@
               <strong><u>Juho Jung</u></strong>*, Migyeong Yang*, Hyunseon Won, Jiwon Kim, Jeong Mo Han, Joon Seo Hwang, Daniel Duck-Jin Hwang, Jinyoung Han<br>
               <em>WACV</em>, 2025
               <div class="links">
-                <a href="https://openaccess.thecvf.com/content/WACV2025/html/Jung_CAMEL_Confidence-Aware_Multi-Task_Ensemble_Learning_with_Spatial_Information_for_Retina_WACV_2025_paper.html">Project Page</a> |
-                <a href="data/paper/camel-wacv-2025.pdf">Paper</a> |
-                <a href="https://github.com/Juho-Jung/CAMEL">Code</a>
+                <a class="btn" href="https://openaccess.thecvf.com/content/WACV2025/html/Jung_CAMEL_Confidence-Aware_Multi-Task_Ensemble_Learning_with_Spatial_Information_for_Retina_WACV_2025_paper.html"><i class="fa-solid fa-arrow-up-right-from-square"></i>project page</a>
+                <a class="btn" href="data/paper/camel-wacv-2025.pdf"><i class="fa-solid fa-file-lines"></i>paper</a>
+                <a class="btn" href="https://github.com/Juho-Jung/CAMEL"><i class="fa-brands fa-github"></i>code</a>
               </div>
               <p style="margin-top:8px">
                 A novel framework designed to reduce task-specific uncertainty in multi-task learning for retinal OCT image analysis through confidence-aware ensemble learning.
@@ -219,9 +301,9 @@
               <strong><u>Juho Jung</u></strong>, Chaewon Kang, Jeewoo Yoon, Seungbae Kim, Jinyoung Han<br>
               <em>CIKM</em>, 2024 (Oral)
               <div class="links">
-                <a href="https://dl.acm.org/doi/abs/10.1145/3627673.3679797">Project Page</a> |
-                <a href="data/paper/hique-cikm-2025.pdf">Paper</a> |
-                <a href="https://github.com/Juho-Jung/HiQuE">Code</a>
+                <a class="btn" href="https://dl.acm.org/doi/abs/10.1145/3627673.3679797"><i class="fa-solid fa-arrow-up-right-from-square"></i>project page</a>
+                <a class="btn" href="data/paper/hique-cikm-2025.pdf"><i class="fa-solid fa-file-lines"></i>paper</a>
+                <a class="btn" href="https://github.com/Juho-Jung/HiQuE"><i class="fa-brands fa-github"></i>code</a>
               </div>
               <p style="margin-top:8px">
                 A hierarchical question embedding network for multimodal depression detection using structured question-answer pairs.
@@ -245,9 +327,9 @@
               Sangyoun Lee, <strong><u>Juho Jung</u></strong>, Changdae Oh, Sunghee Yun<br>
               <em>arXiv</em>, 2024
               <div class="links">
-                <a href="https://arxiv.org/abs/2407.13078">arXiv</a> |
-                <a href="data/paper/s6-arxiv-2024.pdf">Paper</a> |
-                <a href="https://github.com/Juho-Jung/RDFA-S6">Code</a>
+                <a class="btn" href="https://arxiv.org/abs/2407.13078"><i class="fa-solid fa-scroll"></i>arXiv</a>
+                <a class="btn" href="data/paper/s6-arxiv-2024.pdf"><i class="fa-solid fa-file-lines"></i>paper</a>
+                <a class="btn" href="https://github.com/Juho-Jung/RDFA-S6"><i class="fa-brands fa-github"></i>code</a>
               </div>
               <p style="margin-top:8px">
                 Advanced s6 modeling with recurrent mechanism for enhanced temporal action localization.
@@ -271,7 +353,7 @@
               <strong><u>Juho Jung</u></strong>, Jinyoung Han, Jeong Mo Han, Junseo Ko, Jeewoo Yoon, Joon Seo Hwang, Ji In Park, Gyudeok Hwang, Jae Ho Jung, Daniel Duck-Jin Hwang<br>
               <em>Scientific Reports</em>, 2024
               <div class="links">
-                <a href="data/paper/amd_prediction-scientificreport-2024.pdf">Paper</a>
+                <a class="btn" href="data/paper/amd_prediction-scientificreport-2024.pdf"><i class="fa-solid fa-file-lines"></i>paper</a>
               </div>
               <p style="margin-top:8px">
                 Deep neural network-based prediction of neovascular age-related macular degeneration recurrence using OCT images.
@@ -295,8 +377,8 @@
               <strong><u>Juho Jung</u></strong>, Chaewon Kang, Jeewoo Yoon, Simon S Woo, Jinyoung Han<br>
               <em>CIKM</em>, 2023
               <div class="links">
-                <a href="data/paper/safe-cikm-2024.pdf">Paper</a> |
-                <a href="data/video/cikm_presentation_10.1145_3583780.3615279.mp4">video</a>
+                <a class="btn" href="data/paper/safe-cikm-2024.pdf"><i class="fa-solid fa-file-lines"></i>paper</a>
+                <a class="btn" href="data/video/cikm_presentation_10.1145_3583780.3615279.mp4"><i class="fa-solid fa-video"></i>video</a>
               </div>
               <p style="margin-top:8px">
                 Sequential attentive face embedding with contrastive learning for deepfake video detection.
@@ -329,9 +411,9 @@
               </span><br>
               <em>March 2025 - September 2025</em><br>
               <div class="links">
-                <a href="https://luna25.grand-challenge.org/ai-phases-rules/">Project Page</a> |
-                <a href="data/project/LUNA_25.pdf">Paper</a> |
-                <a href="https://github.com/Juho-Jung/luna25-challenge">Code</a>
+                <a class="btn" href="https://luna25.grand-challenge.org/ai-phases-rules/"><i class="fa-solid fa-arrow-up-right-from-square"></i>project page</a>
+                <a class="btn" href="data/project/LUNA_25.pdf"><i class="fa-solid fa-file-lines"></i>paper</a>
+                <a class="btn" href="https://github.com/Juho-Jung/luna25-challenge"><i class="fa-brands fa-github"></i>code</a>
               </div>
               <p style="margin-top:8px">
                 Participating in the LUNA25 AI Challenge for lung nodule analysis and detection using advanced deep learning techniques. Achieved 7th place out of 56 teams and 1035 participants.
@@ -353,8 +435,8 @@
               <em>Carnegie Mellon University</em>, <em>Institute of Information & communications Technology Planning & Evaluation (IITP)</em><br>
               <em>September 2023 - February 2024</em><br>
               <div class="links">
-                <a href="data/project/WWW.pdf">Paper</a> |
-                <a href="https://github.com/Juho-Jung/FakeMix">Code</a>
+                <a class="btn" href="data/project/WWW.pdf"><i class="fa-solid fa-file-lines"></i>paper</a>
+                <a class="btn" href="https://github.com/Juho-Jung/FakeMix"><i class="fa-brands fa-github"></i>code</a>
               </div>
               <p style="margin-top:8px">
                 Developed explainable AI models for detecting deepfake videos using audio-visual features with attention mechanisms and gradient-based explanations.
@@ -376,8 +458,8 @@
               <em>Carnegie Mellon University</em>, <em>Institute of Information & communications Technology Planning & Evaluation (IITP)</em><br>
               <em>September 2023 - December 2023</em><br>
               <div class="links">
-                <a href="data/project/GraphEHR.pdf">Paper</a> |
-                <a href="https://github.com/Juho-Jung/MIMIC_GNN?tab=readme-ov-file">Code</a>
+                <a class="btn" href="data/project/GraphEHR.pdf"><i class="fa-solid fa-file-lines"></i>paper</a>
+                <a class="btn" href="https://github.com/Juho-Jung/MIMIC_GNN?tab=readme-ov-file"><i class="fa-brands fa-github"></i>code</a>
               </div>
               <p style="margin-top:8px">
                 Implemented heterogeneous graph neural networks for modeling complex relationships in electronic health records using MIMIC dataset.
@@ -399,8 +481,8 @@
               <em>National Research Foundation of Korea (KRF)</em><br>
               <em>March 2023 - February 2024</em><br>
               <div class="links">
-                <a href="data/project/Anti-VEGFtreatment.pdf">Paper 1</a> |
-                <a href="data/project/recurrence.pdf">Paper 2</a>
+                <a class="btn" href="data/project/Anti-VEGFtreatment.pdf"><i class="fa-solid fa-file-lines"></i>paper 1</a>
+                <a class="btn" href="data/project/recurrence.pdf"><i class="fa-solid fa-file-lines"></i>paper 2</a>
               </div>
               <p style="margin-top:8px">
                 Developed explainable AI systems for retinal disease detection using OCT images with clinical decision support and recurrence prediction capabilities.
@@ -422,7 +504,7 @@
               <em>National Research Foundation (NRF) of Korea Grant funded by the Korean Government (MSIT)</em><br>
               <em>June 2021 - August 2024</em><br>
               <div class="links">
-                <a href="data/project/ISOML.pdf">Paper</a>
+                <a class="btn" href="data/project/ISOML.pdf"><i class="fa-solid fa-file-lines"></i>paper</a>
               </div>
               <p style="margin-top:8px">
                 Researched self-driving networks and federated learning approaches for private 5G networks with autonomous network management capabilities.
@@ -443,7 +525,7 @@
               </span><br>
               <em>Lifet</em>, <em>February 2022 - September 2023</em><br>
               <div class="links">
-                <a href="https://lifet.co.kr/Survey/AI/Intro">Website</a>
+                <a class="btn" href="https://lifet.co.kr/Survey/AI/Intro"><i class="fa-solid fa-arrow-up-right-from-square"></i>website</a>
               </div>
               <p style="margin-top:8px">
                 Developed an AI model for single-image disease detection and segmentation, deployed and optimized AI models in web, mobile, and LLM adaptation with customer community.
@@ -499,6 +581,6 @@
           </tbody></table>
         </td>
       </tr>
-    </table>
+    </tbody></table>
   </body>
 </html>
