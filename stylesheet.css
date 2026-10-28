@@ -138,6 +138,10 @@ span.highlight {
   image-rendering: pixelated;
 }
 
+.interests .desc {
+  color: #666;
+}
+
 .older-news summary {
   list-style: none;
   cursor: pointer;
