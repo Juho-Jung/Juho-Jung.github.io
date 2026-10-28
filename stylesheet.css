@@ -131,26 +131,11 @@ span.highlight {
 }
 
 .new-badge {
-  display: inline-block;
-  margin-right: 5px;
-  padding: 0 3px;
-  background: #111;
-  color: #fff;
-  font-family: Menlo, Consolas, monospace;
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 13px;
-  border-radius: 2px;
-  vertical-align: 2px;
-  animation: new-blink 1.2s steps(2, start) infinite;
-}
-
-@keyframes new-blink {
-  50% { background: #e8361f; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .new-badge { animation: none; }
+  height: 13px;
+  width: auto;
+  margin-right: 6px;
+  vertical-align: -1px;
+  image-rendering: pixelated;
 }
 
 .older-news summary {
